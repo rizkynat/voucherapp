@@ -10,6 +10,6 @@ class ProdukModel extends Model
     protected $primaryKey = 'id_produk';
 
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['nama_produk', 'harga', 'stok'];
+    protected $allowedFields = ['nama_produk', 'kategori', 'harga', 'stok'];
 
 }

@@ -32,7 +32,7 @@
           <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image">
         </div>
         <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-          <form method="POST" action="">
+          <form method="POST" action="/login">
             <!-- Email input -->
             <div class="form-outline mb-4">
               <input type="text" id="username" name="username" class="form-control form-control-lg">
@@ -41,7 +41,7 @@
 
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="password" class="form-control form-control-lg">
+              <input type="password" id="password" name="password" class="form-control form-control-lg">
               <label class="form-label" for="form1Example23" style="margin-left: 0px;">Password</label>
             <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64px;"></div><div class="form-notch-trailing"></div></div></div>
 

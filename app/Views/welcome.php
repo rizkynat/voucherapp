@@ -84,7 +84,7 @@
                         <a class="nav-link waves-effect">
                             <span class="badge red z-depth-1 mr-1"> 1 </span>
                             <i class="fas fa-shopping-cart"></i>
-                            <span class="clearfix d-none d-sm-inline-block"> Invoice & Voucher </span>
+                            <span class="clearfix d-none d-sm-inline-block"> Cart </span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -98,7 +98,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                    <a href="" class="dark-grey-text">Selamat datang <?= session()->get('username'); ?>	&#128522;	</a>
+                        <a href="
+            /login" class="nav-link border border-light rounded waves-effect" target="/login">Masuk
+                        </a>
                     </li>
                 </ul>
 
@@ -297,12 +299,12 @@
                     <?php foreach ($produks as $produk) : ?>
                         <!--Grid column-->
                         <div class="col-lg-3 col-md-6 mb-4">
+
                             <!--Card-->
                             <div class="card">
 
                                 <!--Card image-->
                                 <div class="view overlay">
-                                    <a href="/produk/<?=$produk['id_produk']?>">
                                     <?php if ($produk['kategori'] == "elektronik") : ?>
                                         <img src="img/electronic.png" class="card-img-top" alt="">
                                     <?php elseif ($produk['kategori'] == 'perabotan') : ?>
@@ -312,8 +314,9 @@
                                     <?php elseif ($produk['kategori'] == 'otomotif') : ?>
                                         <img src="img/otomotif.png" class="card-img-top" alt="">
                                     <?php endif; ?>
-                                    </a>
+
                                     <a>
+                                        <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
                                 <!--Card image-->
@@ -321,12 +324,12 @@
                                 <!--Card content-->
                                 <div class="card-body text-center">
                                     <!--Category & Title-->
-                                    <a href="/produk/<?=$produk['id_produk']?>">
+                                    <a href="" class="grey-text">
                                         <h5><?= $produk['nama_produk']; ?></h5>
                                     </a>
                                     <h5>
                                         <strong>
-                                            <span class="dark-grey-text"><?= ucwords($produk['kategori']); ?></span>
+                                            <a href="" class="dark-grey-text"><?= ucwords($produk['kategori']); ?></a>
                                         </strong>
                                     </h5>
 
