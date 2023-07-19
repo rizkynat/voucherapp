@@ -11,7 +11,7 @@ Jadi misalkan roni telah membeli kulkas seharga 5 juta maka dia tetap mendapatka
 
 ## Interface
 
-![ss1](https://raw.githubusercontent.com/rizkynat/emin/master/public/img/ss1.png)
-![ss2](https://raw.githubusercontent.com/rizkynat/emin/master/public/img/ss2.png)
-![ss3](https://raw.githubusercontent.com/rizkynat/emin/master/public/img/ss3.png)
-![ss4](https://raw.githubusercontent.com/rizkynat/emin/master/public/img/ss4.png)
+![ss1](https://raw.githubusercontent.com/rizkynat/voucherapp/master/public/img/ss1.png)
+![ss2](https://raw.githubusercontent.com/rizkynat/voucherapp/master/public/img/ss2.png)
+![ss3](https://raw.githubusercontent.com/rizkynat/voucherapp/master/public/img/ss3.png)
+![ss4](https://raw.githubusercontent.com/rizkynat/voucherapp/master/public/img/ss4.png)
