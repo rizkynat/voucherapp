@@ -10,6 +10,6 @@ class CustomerModel extends Model
     protected $primaryKey = 'id_customer';
 
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['nama_customer'];
+    protected $allowedFields = ['nama_customer', 'password'];
 
 }

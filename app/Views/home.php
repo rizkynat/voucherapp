@@ -53,7 +53,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-        <strong class="blue-text">MDB</strong>
+        <strong class="blue-text">CoFun</strong>
       </a>
 
       <!-- Collapse -->
@@ -68,20 +68,15 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href="#">Home
+            <a class="nav-link waves-effect" href="#">Beranda
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
+            <a class="nav-link waves-effect" href="#" target="_blank">Tentang Kami</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/getting-started/download/"
-              target="_blank">Free download</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free
-              tutorials</a>
+            <a class="nav-link waves-effect" href="#produk" target="#produk">Produk</a>
           </li>
         </ul>
 
@@ -105,9 +100,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded waves-effect"
-              target="_blank">
-              <i class="fab fa-github mr-2"></i>MDB GitHub
+            <a href="
+            /login" class="nav-link border border-light rounded waves-effect"
+              target="/login">Masuk
             </a>
           </li>
         </ul>
@@ -301,7 +296,7 @@
       <!--/.Navbar-->
 
       <!--Section: Products v.3-->
-      <section class="text-center mb-4">
+      <section class="text-center mb-4" id="produk">
 
         <!--Grid row-->
         <div class="row wow fadeIn">
