@@ -66,7 +66,7 @@
                 <!-- Left -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link waves-effect" href="#">Beranda
+                        <a class="nav-link waves-effect" href="/beranda">Beranda
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -81,20 +81,15 @@
                 <!-- Right -->
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
-                        <a class="nav-link waves-effect">
-                            <span class="badge red z-depth-1 mr-1"> 1 </span>
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="clearfix d-none d-sm-inline-block"> Invoice & Voucher </span>
+                        <a href="/invoice" class="nav-link waves-effect">
+                            <span class="badge red z-depth-1 mr-1"> <?=$jumlah_invoice?></span>
+                            <span class="clearfix d-none d-sm-inline-block"> Invoice </span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect" target="_blank">
-                            <i class="fab fa-twitter"></i>
+                        <a href="/invoice" class="nav-link waves-effect">
+                            <span class="badge red z-depth-1 mr-1"> <?=$jumlah_voucher?> </span>
+                            <span class="clearfix d-none d-sm-inline-block"> Voucher</span>
                         </a>
                     </li>
                     <li class="nav-item">

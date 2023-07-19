@@ -38,6 +38,8 @@ $routes->get('/produk/(:num)', 'ProdukController::show/$1');
 
 $routes->post('/checkout', 'InvoiceController::checkout');
 
+$routes->get('/invoice', 'InvoiceController::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

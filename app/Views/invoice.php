@@ -105,83 +105,83 @@
 
     <!--Main layout-->
     <main class="mt-5 pt-4">
-        <div class="container dark-grey-text mt-5">
+        <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+
+            <!-- Heading -->
+            <h2 class="my-5 h2 text-center">Invoice & Voucher</h2>
 
             <!--Grid row-->
-            <div class="row wow fadeIn">
+            <div class="row">
 
                 <!--Grid column-->
-                <div class="col-md-6 mb-4">
-                    <?php if ($produk[0]['kategori'] == "elektronik") : ?>
-                        <img src="<?= base_url('img/electronic.png'); ?>" class="img-fluid" alt="">
-                    <?php elseif ($produk[0]['kategori'] == 'perabotan') : ?>
-                        <img src="<?= base_url('img/furniture.png'); ?>" class="img-fluid" alt="">
-                    <?php elseif ($produk[0]['kategori'] == 'fashion') : ?>
-                        <img src="<?= base_url('img/fashion.png'); ?>" class="img-fluid" alt="">
-                    <?php elseif ($produk[0]['kategori'] == 'otomotif') : ?>
-                        <img src="<?= base_url('img/otomotif.png'); ?>" class="img-fluid" alt="">
-                    <?php endif; ?>
+                <div class="col-md-8 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Invoice anda</span>
+                        <span class="badge badge-secondary badge-pill"><?=$jumlah_invoice?></span>
+                    </h4>
+
+                    <!--Card-->
+                    <div class="card"><ul class="list-group mb-3 z-depth-1">
+                        <?php $totalInvoice=0;?>
+                        <?php foreach($invoices as $invoice):?>
+                            <?php $totalInvoice+=$invoice['total_invoice'];?>
+
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">ID Inovice: <?=$invoice['id_invoice']?></h6>
+                                    <small class="text-muted">Tanggal: <?=$invoice['tgl_invoice']?></small>
+                                </div>
+                                <span class="text-muted">Rp <?=number_format($invoice['total_invoice'], 0, ",", ".")?></span>
+                            </li>
+                            <?php endforeach; ?>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total (Rupiah)</span>
+                            <strong>Rp <?= number_format($totalInvoice, 0, ",", ".")?></strong>
+                        </li>
+                    </ul>
+
+                    </div>
+                    <!--/.Card-->
 
                 </div>
                 <!--Grid column-->
 
                 <!--Grid column-->
-                <div class="col-md-6 mb-4">
+                <div class="col-md-4 mb-4">
 
-                    <!--Content-->
-                    <div class="p-4">
+                    <!-- Heading -->
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Voucher anda</span>
+                        <span class="badge badge-secondary badge-pill"><?=$jumlah_voucher?></span>
+                    </h4>
 
-                        <div class="mb-3">
-                            <a href="">
-                                <span class="badge purple mr-1">Category 2</span>
-                            </a>
-                            <a href="">
-                                <span class="badge blue mr-1">New</span>
-                            </a>
-                            <a href="">
-                                <span class="badge red mr-1">Bestseller</span>
-                            </a>
-                        </div>
+                    <!-- Cart -->
+                    <ul class="list-group mb-3 z-depth-1">
+                    <?php $totalVoucher=0;?>
+                        <?php foreach($vouchers as $voucher):?>
+                            <?php $totalVoucher+=$voucher['nilai_voucher'];?>
 
-                        <p class="lead">
-                            <span class="mr-1">
-                            </span>
-                            <span>Harga: Rp <span id="span-harga-produk"><?= number_format($produk[0]['harga'], 0, ",", ".") ?></span></span>
-                        </p>
-
-                        <p class="lead font-weight-bold"><?= $produk[0]['nama_produk']; ?></p>
-                        <p>Stok: <b><?= $produk[0]['stok']; ?></b></p>
-
-                        <p>Kategori produk: <?= $produk[0]['kategori']; ?></p>
-
-                        <form method="POST" action="/checkout" >
-                            <!-- Default input -->
-                            <input type="hidden" value="<?= $produk[0]['id_produk']?>" name="id_produk"/>
-                            <div class="d-flex justify-content-left mb-4">
-                                <select name="kode_voucher" class="custom-select d-block w-100" id="kode-voucher" required="" style="width: 50%">
-                                <?php foreach($voucher_aktifs as $voucher_aktif):?>
-                                    <option value="10000"><?=$voucher_aktif?></option>
-                                <?php endforeach;?>
-                                </select>
-                                
-                            </div>
-                            <div class="d-flex justify-content-left">
-                                <input id="input-kuantitas" type="number" name="kuantitas" min="1" step="1" value="1" aria-label="Search" class="form-control" style="width: 100px">
-                                <button class="btn btn-primary btn-md my-0 p" type="submit">Check Out
-                                    <i class="fas fa-shopping-cart ml-1"></i>
-                                </button>
-                            </div>
-
-                        </form>
-
-                    </div>
-                    <!--Content-->
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Kode Voucher: <?=$voucher['kode_voucher']?></h6>
+                                    <small class="text-muted">Tanggal Expired: <?=$voucher['tgl_expired']?></small>
+                                </div>
+                                <span class="text-muted">Rp <?=number_format($voucher['nilai_voucher'], 0, ",", ".")?></span>
+                            </li>
+                            <?php endforeach; ?>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total (Rupiah)</span>
+                            <strong>Rp <?= number_format($totalVoucher, 0, ",", ".")?></strong>
+                        </li>
+                    </ul>
+                    <!-- Cart -->
 
                 </div>
                 <!--Grid column-->
 
             </div>
             <!--Grid row-->
+
         </div>
     </main>
     <!--Main layout-->
@@ -254,21 +254,20 @@
         new WOW().init();
         $(document).ready(function() {
             var harga_produk_span = document.getElementById('span-harga-produk')
-            var kode_voucher = parseInt(document.getElementById('kode-voucher').value)
             const harga_produk_awal = document.getElementById('span-harga-produk').textContent
             var quantity_input_awal = parseInt(document.getElementById('input-kuantitas').value)
             $('#input-kuantitas').change(function() {
                 var quantity_input_update = parseInt($(this).val());
-                if(quantity_input_update >= quantity_input_awal){
+                if (quantity_input_update >= quantity_input_awal) {
                     var harga_produk = harga_produk_awal
                     var harga_produk_to_string = (harga_produk.toString())
                     var harga_produk_to_int = parseInt(harga_produk_to_string.replace(/\./g, ''), 10)
-                    var total = (harga_produk_to_int * parseInt(quantity_input_update) - kode_voucher)
+                    var total = harga_produk_to_int * parseInt(quantity_input_update)
                     harga_produk_span.textContent = total.toLocaleString("id-ID");
                 }
 
             });
-            });
+        });
     </script>
 </body>
 

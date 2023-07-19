@@ -9,6 +9,27 @@ use DateTime;
 
 class InvoiceController extends BaseController
 {
+    public function index(){
+        
+        $invoiceModel = new InvoiceModel();
+        
+        $voucherModel = new VoucherModel();
+
+        // Fetch products using the model with pagination
+        $data['vouchers']= $voucherModel->findAll(); 
+
+        // Fetch products using the model with pagination
+        $data['invoices']= $invoiceModel->findAll();
+
+        $data['jumlah_voucher'] = count($data['vouchers']);
+
+        
+        $data['jumlah_invoice'] = count($data['invoices']);
+          
+        // Load the view and pass the data to it
+        return view('invoice', $data);
+
+    }
 
     public function checkout()
     {
